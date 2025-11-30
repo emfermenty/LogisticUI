@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7841705C-BD7F-44C4-8468-1AFDF4491244}|LogisticWPF\\LogisticWPF.csproj|c:\\users\\demra\\source\\repos\\logisticwpf\\logisticwpf\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7841705C-BD7F-44C4-8468-1AFDF4491244}|LogisticWPF\\LogisticWPF.csproj|solutionrelative:logisticwpf\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7841705C-BD7F-44C4-8468-1AFDF4491244}|LogisticWPF\\LogisticWPF.csproj|c:\\users\\demra\\source\\repos\\logisticwpf\\logisticwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7841705C-BD7F-44C4-8468-1AFDF4491244}|LogisticWPF\\LogisticWPF.csproj|solutionrelative:logisticwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7841705C-BD7F-44C4-8468-1AFDF4491244}|LogisticWPF\\LogisticWPF.csproj|c:\\users\\demra\\source\\repos\\logisticwpf\\logisticwpf\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7841705C-BD7F-44C4-8468-1AFDF4491244}|LogisticWPF\\LogisticWPF.csproj|solutionrelative:logisticwpf\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7841705C-BD7F-44C4-8468-1AFDF4491244}|LogisticWPF\\LogisticWPF.csproj|c:\\users\\demra\\source\\repos\\logisticwpf\\logisticwpf\\dto\\shippingquote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7841705C-BD7F-44C4-8468-1AFDF4491244}|LogisticWPF\\LogisticWPF.csproj|solutionrelative:logisticwpf\\dto\\shippingquote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7841705C-BD7F-44C4-8468-1AFDF4491244}|LogisticWPF\\LogisticWPF.csproj|c:\\users\\demra\\source\\repos\\logisticwpf\\logisticwpf\\dto\\changestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7841705C-BD7F-44C4-8468-1AFDF4491244}|LogisticWPF\\LogisticWPF.csproj|solutionrelative:logisticwpf\\dto\\changestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7841705C-BD7F-44C4-8468-1AFDF4491244}|LogisticWPF\\LogisticWPF.csproj|c:\\users\\demra\\source\\repos\\logisticwpf\\logisticwpf\\command\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7841705C-BD7F-44C4-8468-1AFDF4491244}|LogisticWPF\\LogisticWPF.csproj|solutionrelative:logisticwpf\\command\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 237,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 66,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ShippingQuote.cs",
+              "DocumentMoniker": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\LogisticWPF\\DTO\\ShippingQuote.cs",
+              "RelativeDocumentMoniker": "LogisticWPF\\DTO\\ShippingQuote.cs",
+              "ToolTip": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\LogisticWPF\\DTO\\ShippingQuote.cs",
+              "RelativeToolTip": "LogisticWPF\\DTO\\ShippingQuote.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T13:37:19.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChangeStatusDTO.cs",
+              "DocumentMoniker": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\LogisticWPF\\DTO\\ChangeStatusDTO.cs",
+              "RelativeDocumentMoniker": "LogisticWPF\\DTO\\ChangeStatusDTO.cs",
+              "ToolTip": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\LogisticWPF\\DTO\\ChangeStatusDTO.cs",
+              "RelativeToolTip": "LogisticWPF\\DTO\\ChangeStatusDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T12:58:38.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\LogisticWPF\\Command\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "LogisticWPF\\Command\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\LogisticWPF\\Command\\RelayCommand.cs",
+              "RelativeToolTip": "LogisticWPF\\Command\\RelayCommand.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAmwBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T12:32:17.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\LogisticWPF\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "LogisticWPF\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\LogisticWPF\\MainWindow.xaml",
+              "RelativeToolTip": "LogisticWPF\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-30T11:40:52.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\LogisticWPF\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "LogisticWPF\\Services\\ApiService.cs",
+              "ToolTip": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\LogisticWPF\\Services\\ApiService.cs",
+              "RelativeToolTip": "LogisticWPF\\Services\\ApiService.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAcwF0AAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T11:55:58.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\LogisticWPF\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "LogisticWPF\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\demra\\source\\repos\\LogisticWPF\\LogisticWPF\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "LogisticWPF\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAmwMEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T11:35:28.379Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

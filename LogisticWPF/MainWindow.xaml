@@ -1,0 +1,172 @@
+﻿<Window x:Class="LogisticWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Logistics" Height="600" Width="900">
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0"
+                BorderBrush="Gray" BorderThickness="1"
+                CornerRadius="10" Padding="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Активные перевозки"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"/>
+                <ListBox Grid.Row="1"
+                         ItemsSource="{Binding ActiveShippings}"
+                         BorderThickness="0"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"
+                         HorizontalContentAlignment="Stretch">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Button Content="{Binding TrackingNumber}"
+                                    Height="40" Margin="0,5"
+                                    Command="{Binding DataContext.SelectShippingCommand,
+                                              RelativeSource={RelativeSource AncestorType=Window}}"
+                                    CommandParameter="{Binding}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </Border>
+
+        <!-- Правая колонка: детали перевозки + кнопки -->
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0"
+                    BorderBrush="Gray" BorderThickness="1"
+                    CornerRadius="10" Padding="10">
+                <StackPanel>
+                    <!-- Информация о перевозке -->
+                    <TextBlock Text="{Binding SelectedShippingInfo}" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                    <!-- Кнопки изменения статуса -->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Accept (Created → InTransit) -->
+                        <Button Grid.Column="0" Content="Принять"
+                                Command="{Binding AcceptCommand}" Margin="0,0,10,0" Height="35" MinWidth="80">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding SelectedShipping.Status}" Value="Created">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+
+                        <!-- Complete (InTransit → Delivered) -->
+                        <Button Grid.Column="1" Content="Завершить"
+                                Command="{Binding CompleteCommand}" Margin="0,0,10,0" Height="35" MinWidth="80">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding SelectedShipping.Status}" Value="InTransit">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+
+                        <!-- Cancel (Created или InTransit → Cancelled) -->
+                        <Button Grid.Column="2" Content="Отменить"
+                                Command="{Binding CancelCommand}" Height="35" MinWidth="80">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding SelectedShipping.Status}" Value="Created">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding SelectedShipping.Status}" Value="InTransit">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="1"
+        BorderBrush="Gray"
+        BorderThickness="1"
+        CornerRadius="10"
+        Padding="10"
+        Margin="0,15,0,0">
+                <StackPanel>
+                    <TextBlock Text="Рассчитать стоимость перевозки" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <TextBlock Text="Дистанция:" Width="100" VerticalAlignment="Center"/>
+                        <TextBox Text="{Binding InputDistance}" Width="150"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <TextBlock Text="Объем:" Width="100" VerticalAlignment="Center"/>
+                        <TextBox Text="{Binding InputVolume}" Width="150"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Вес:" Width="100" VerticalAlignment="Center"/>
+                        <TextBox Text="{Binding InputWeight}" Width="150"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,5">
+                        <Button Content="Получить все котировки" Command="{Binding GetQuotesCommand}" Width="160" Margin="0,0,10,0"/>
+                        <Button Content="Оптимизировать" Command="{Binding GetOptimizedQuoteCommand}" Width="100"/>
+                    </StackPanel>
+
+                    <TextBlock Text="Результаты:" FontWeight="Bold" Margin="0,10,0,5"/>
+                    <ListBox ItemsSource="{Binding Quotes}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Type}"/>
+                                    <TextBlock Text="{Binding Cost, StringFormat='Стоимость: {0}'}"/>
+                                    <TextBlock Text="{Binding Duration, StringFormat='Длительность: {0}'}"/>
+                                    <TextBlock Text="{Binding Requirements, StringFormat='Требования: {0}'}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <TextBlock Text="{Binding OptimizedQuoteInfo}" FontWeight="Bold" Margin="0,10,0,0"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Создать перевозку -->
+            <Button Grid.Row="2"
+                    Content="Создать перевозку"
+                    Width="160" Height="40" 
+                    HorizontalAlignment="Right"
+                    Margin="0 15 0 0"
+                    Command="{Binding CreateShippingCommand}"/>
+        </Grid>
+    </Grid>
+</Window>

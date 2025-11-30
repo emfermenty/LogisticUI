@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticWPF", "LogisticWPF\LogisticWPF.csproj", "{7841705C-BD7F-44C4-8468-1AFDF4491244}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7841705C-BD7F-44C4-8468-1AFDF4491244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7841705C-BD7F-44C4-8468-1AFDF4491244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7841705C-BD7F-44C4-8468-1AFDF4491244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7841705C-BD7F-44C4-8468-1AFDF4491244}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5279EEDB-C489-4645-81E8-1D5FC94711C4}
+	EndGlobalSection
+EndGlobal
