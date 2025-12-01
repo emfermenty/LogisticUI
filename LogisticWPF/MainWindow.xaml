@@ -39,7 +39,6 @@
             </Grid>
         </Border>
 
-        <!-- Правая колонка: детали перевозки + кнопки -->
         <Grid Grid.Column="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
@@ -51,10 +50,8 @@
                     BorderBrush="Gray" BorderThickness="1"
                     CornerRadius="10" Padding="10">
                 <StackPanel>
-                    <!-- Информация о перевозке -->
                     <TextBlock Text="{Binding SelectedShippingInfo}" FontWeight="Bold" Margin="0,0,0,10"/>
 
-                    <!-- Кнопки изменения статуса -->
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
@@ -62,7 +59,6 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
-                        <!-- Accept (Created → InTransit) -->
                         <Button Grid.Column="0" Content="Принять"
                                 Command="{Binding AcceptCommand}" Margin="0,0,10,0" Height="35" MinWidth="80">
                             <Button.Style>
@@ -77,7 +73,6 @@
                             </Button.Style>
                         </Button>
 
-                        <!-- Complete (InTransit → Delivered) -->
                         <Button Grid.Column="1" Content="Завершить"
                                 Command="{Binding CompleteCommand}" Margin="0,0,10,0" Height="35" MinWidth="80">
                             <Button.Style>
@@ -92,7 +87,6 @@
                             </Button.Style>
                         </Button>
 
-                        <!-- Cancel (Created или InTransit → Cancelled) -->
                         <Button Grid.Column="2" Content="Отменить"
                                 Command="{Binding CancelCommand}" Height="35" MinWidth="80">
                             <Button.Style>
@@ -160,7 +154,6 @@
                 </StackPanel>
             </Border>
 
-            <!-- Создать перевозку -->
             <Button Grid.Row="2"
                     Content="Создать перевозку"
                     Width="160" Height="40" 
